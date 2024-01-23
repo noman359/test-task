@@ -1,0 +1,29 @@
+
+type Customer {                
+name             :String
+phone_number     :String
+password: String
+email: String
+}
+
+
+type LoginResp {
+  message: String
+}
+
+
+type Query {
+  login(password:String,
+email: String): LoginResp
+  
+}
+
+type Mutation{
+signUp(name:String,
+phone_number:String,
+password:String,
+email: String,
+confirm_password: String
+): Customer
+}
+
